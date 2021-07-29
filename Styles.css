@@ -1,0 +1,145 @@
+/* scaling */
+/* 
+$desktop:1200px;
+$laptop: 992px;
+$tablet: 768px;
+$phone: 480px; 
+*/
+
+body{
+    background-color: #202124;
+}
+
+h1, h2, h3, h4, p, label{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.container-fluid{
+    border-top: 2px solid #bb3f96;
+}
+
+/* cards */
+.mainCard{
+    border: 2px solid rgb(29, 29, 29);
+    background-color: #282C2F;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.cardImg{
+    height: 200px;
+    width: 100%; 
+    border-bottom: 2px solid #bb3f96;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.cardContent{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* form */
+input[type="text"]
+{
+    background: transparent;
+}
+
+input[type="file"]{
+    background: none;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+input{
+    color: white;
+}
+
+.formArea{
+    text-align: center;
+    width: 100%;
+}
+
+.wrapper{
+    margin-top: 45px;
+}
+
+.wrapper .input-data{
+    height: 40px;
+    width: 65%;
+    position: relative;
+    margin-left: 65px;
+}
+
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 18px;
+}
+
+.input-data input:focus ~ label,
+.input-data input:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: #bb3f96;
+}
+
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: white;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 100%;
+}
+
+.input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(187,63,150,1) 25%, rgba(223,65,110,1) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
+
+/* form select */
+#formSelector{
+    font-size: 16px;
+    width: 50%;
+}
+
+/* form button */
+.formBtn{
+    margin-top: 65px;
+    margin-bottom: 50px;
+    width: 65%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    background: linear-gradient(90deg, rgba(187,63,150,1) 25%, rgba(223,65,110,1) 100%);
+    color: white;
+}
+
+.formBtn:hover{
+    transform: scale(1.04);
+    transition: 0.3s ease;
+}
+
